@@ -106,13 +106,6 @@ def show_options():
     """ prints out a list of commands """
     print("\nYou can use the following commands: choose your drink, 'show' commands, 'report' or 'fill' resources, 'collect' money, or turn 'off'.")
 
-# choice = 'latte'
-# drink = MENU[choice]
-# run = MENU[choice]['ingredients']
-#
-# for i in run:
-#     print("drink ",run[i], "Storage ",storage[i])
-
 print(logo)
 show_options()
 while True:
