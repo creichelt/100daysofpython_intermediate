@@ -16,7 +16,7 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 board = Scoreboard()
-∑
+
 screen.listen()
 screen.onkey(snake.up, 'Up')
 screen.onkey(snake.down, 'Down')
@@ -36,14 +36,23 @@ def game():
             board.increase_score()
         # Detect collision with wall
         if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-            game_on = False
-            board.game_over()
+            board.reset()
+            snake.reset()
         # Detect collision with self
-        for segment in snake.segments[1::]:
-            if snake.head.distance(segment) < 10:
-                game_on = False
-                board.game_over()
+        for segment in snake.segments:
+            if segment == snake.head:
+                pass
+            elif snake.head.distance(segment) < 10:
+                board.reset()
+                snake.reset()
 
 game()
 
 screen.exitonclick()
+
+
+
+# with open('save.txt', mode ='w') as file:
+# #    contents = file.read()
+# #    print(contents)
+#     file.write('new text bla')
