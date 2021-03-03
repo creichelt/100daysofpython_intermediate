@@ -23,7 +23,9 @@ while len(correct_states) <= 50:
     state_df = df[df.state == answer]
     if answer == 'Exit':
         missing = list(set(usa) - set(correct_states))
-        # creating output with missed states
+        # alternatively using list comprehension:
+        # missing = [state for state in usa if state not in correct_states]
+    # creating output with missed states
         new_df = pd.DataFrame(missing)
         new_df.to_csv('Missing_states.csv')
         break
@@ -43,7 +45,3 @@ while len(correct_states) <= 50:
 
 
 t.mainloop()
-
-
-
-
