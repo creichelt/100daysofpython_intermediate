@@ -4,7 +4,7 @@ import csv
 
 df = pd.read_csv('50_states.csv')
 screen = t.Screen()
-screen.setup(height=550, width=750)
+screen.setup(height=850, width=750)
 screen.title('U.S. States Game')
 image = 'blank_states_img.gif'
 screen.addshape(image)
