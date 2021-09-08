@@ -13,9 +13,9 @@ class Menu:
     """Models the Menu with drinks."""
     def __init__(self):
         self.menu = [
-            MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
-            MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5),
-            MenuItem(name="cappuccino", water=250, milk=50, coffee=24, cost=3),
+            MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.50),
+            MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.50),
+            MenuItem(name="cappuccino", water=250, milk=50, coffee=24, cost=3.00),
         ]
 
     def get_items(self):
